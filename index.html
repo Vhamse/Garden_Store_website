@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home Gardening App</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#business-idea">About</a>
+            <a href="#contact-info">Contact</a>
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+                <button class="search-button" onclick="searchPlants()">Search</button>
+            </div>
+        </nav>
+        <img src="logo.webp" alt="Home Gardening App Logo">
+        <h1 class="header-title">Personalized Home Gardening App</h1>
+        <div class="header-info-box">
+            <p>Your solution for a flourishing garden at your fingertips! <a href="https://play.google.com/store/apps/details?id=com.gardenapp&hl=en&gl=US" target="_blank" rel="noopener noreferrer">Download Now</a></p>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="location.href='signin.html'">Sign In</button>
+            <button onclick="location.href='signup.html'">New User?</button>
+        </div>
+    </header>
+
+    <!-- Filter container -->
+    <section id="filter-container" class="filter-container">
+        <h3>Filter by Plant Type</h3>
+        <button onclick="filterPlants('Air Purify')" data-plant-type="Air Purify">Air Purify</button>
+        <button onclick="filterPlants('Money')" data-plant-type="Money">Money Plant</button>
+        <button onclick="filterPlants('Lucky Bamboo')" data-plant-type="lucky-bamboo">Lucky-Bamboo</button>
+        <button onclick="filterPlants('Syngonium')" data-plant-type="Syngonium">Syngonium</button>
+        <button onclick="filterPlants('Jade')" data-plant-type="Jade">Jade</button>
+        <button onclick="filterPlants('Peacelily')" data-plant-type="Peacelily">Peacelily</button>
+        <button onclick="filterPlants('Bonsai')" data-plant-type="Bonsai">Bonsai</button>
+        <button onclick="resetFilter()">Reset Filter</button>
+    </section>
+
+    <!-- Plant cards container -->
+    <section id="plant-type" class="plant-cards-container">
+        <!-- Plant Card 1 -->
+        <div class="plant-card" data-plant-type="Jade">
+            <img src="images/plant1.jpg" alt="Plant 1">
+            <h3>Mini Orange</h3>
+            <p>Description:<br>
+                Scientific Name: Citrus mitis<br>
+                Plant Height: About 4 to 6 inches<br>
+                Plant Purpose: Ornamental <br>
+                Fruit Taste: Sweet to Sour
+            </p>
+            <p>Price: ₹699.00</p>
+            <button onclick="buyNow('https://www.santhionlineplants.com/product/mini-orange/?gclid=Cj0KCQiAwbitBhDIARIsABfFYILzFRlsURo6H3tSBbDTdx2K2IVxkyeGm-zTO9PxfJnwGYbaruN_vhwaAsLqEALw_wcB')">Buy Now</button>
+        </div>
+
+        <!-- Plant Card 2 -->
+        <div class="plant-card" data-plant-type="Bonsai">
+            <img src="images/plant2.jpg" alt="Plant 2">
+            <h3>Ficus microcarpa Bonsai</h3>
+            <p>Description:<br>
+                Scientific Name: Box Bonsai, Boxwood Bonsai <br>
+                Plant Height: About 6 to 8 inches<br>
+                Plant Purpose: Ornamental <br>
+                Flower colour: white
+            </p>
+            <p>Price: ₹2899.00</p>
+            <button onclick="buyNow('https://nurserylive.com/collections/bonsai-plants/products/ficus-bonsai-in-ceramic-pot-plant')">Buy Now</button>
+        </div>
+
+        <!-- Plant Card 3 -->
+        <div class="plant-card" data-plant-type="Bonsai">
+            <img src="images/plant3.jpg" alt="Plant 3">
+            <h3>Ficus Iceland Bonsai</h3>
+            <p>Description:<br>
+                Scientific Name: Ficus Bonsai<br>
+                Plant Height: up to 35cm<br>
+                Plant Purpose: Ornamental <br>
+                Flower colour: No-Flowers
+            </p>
+            <p>Price: ₹799.00</p>
+            <button onclick="buyNow('https://nurserylive.com/collections/bonsai-plants/products/ficus-iceland-bonsai-plant')">Buy Now</button>
+        </div>
+
+        <!-- Plant Card 4 -->
+        <div class="plant-card" data-plant-type="Bonsai">
+            <img src="images/plant4.jpg" alt="Plant 4">
+            <h3>Chinese Pepper Bonsai</h3>
+            <p>Description:<br>
+                Common Name: Korean Pepper <br>
+                Plant Height: Up to 2 Feet<br>
+                Plant Purpose: Ornamental <br>
+                Flower colour: No-Flowers
+            </p>
+            <p>Price: ₹2099.00</p>
+            <button onclick="buyNow('https://nurserylive.com/collections/bonsai-plants/products/chinese-pepper-bonsai-plant')">Buy Now</button>
+        </div>
+        <!-- Plant Card 5 -->
+        <div class="plant-card" data-plant-type="Peacelily">
+            <img src="images/plant5.jpg" alt="Plant 5">
+            <h3>Peacelily Plant</h3>
+            <p>Description:<br>
+                Common Name: Peacelily / hybird lilly <br>
+                Plant Height: Up to 1 Feet<br>
+                Plant Purpose: Ornamental <br>
+                Flower colour: No-Flowers
+            </p>
+            <p>Price: ₹359.00</p>
+            <button onclick="buyNow('https://nurserylive.com/collections/lucky-bamboos/products/3-layers-lucky-bamboo')">Buy Now</button>
+        </div>
+        <!-- Plant Card 6 -->
+        <div class="plant-card" data-plant-type="lucky-bamboo">
+            <img src="images/plant6.jpg" alt="plant 6">
+            <h3>Lucky Bamboo</h3>
+            <p>Description:<br>
+                Common Name: indoor Bamboo <br>
+                Plant Height: Up to 4 Feet<br>
+                Plant Purpose: Ornamental <br>
+                Flower colour: white
+            </p>
+            <p>Price: ₹359.00</p>
+            <button onclick="buyNow('https://nurserylive.com/collections/bonsai-plants/products/chinese-pepper-bonsai-plant')">Buy Now</button>
+        </div>
+        <!-- Plant Card 7 -->
+        <div class="plant-card" data-plant-type="Money">
+            <img src="images/plant7.jpg" alt="plant 7">
+            <h3>Money Plant with Self Watering Green POt</h3>
+            <p>Description:<br>
+                Common Name: Money Plant <br>
+                Plant Height: 8"<br>
+                Plant Purpose: Ornamental,Air Purifying <br>
+                Flower colour: No-Flowers
+            </p>
+            <p>Price: ₹269.00</p>
+            <button onclick="buyNow('https://urbano.in/product/urbano-golden-money-plant-with-self-watering-green-pot-pot-height-4%E2%80%B3-and-plant-height-8%E2%80%B3-pack-of-1/')">Buy Now</button>
+        </div>
+         <!-- Plant Card 8 -->
+         <div class="plant-card" data-plant-type="Syngonium">
+            <img src="images/plant8.jpg" alt="plant 8">
+            <h3>Syngonium plant</h3>
+            <p>Description:<br>
+                Common Name: Syngonium, Air Purifying Plant <br>
+                Plant Height: Up to 4 Feet<br>
+                Plant Purpose: Ornamental <br>
+                Flower colour: No-Flowers
+            </p>
+            <p>Price: ₹199.00</p>
+            <button onclick="buyNow('https://www.vgreengarden.com/product/syngonium-plant-indoor-plant/')">Buy Now</button>
+        </div>
+         <!-- Plant Card 9 -->
+         <div class="plant-card" data-plant-type="Air Purify">
+            <img src="images/plant9.jpg" alt="plant 9">
+            <h3>Snake plant</h3>
+            <p>Description:<br>
+                Common Name: Snake, Air Purifying Plant <br>
+                Plant Height: 7-11 inch<br>
+                Plant Purpose: Air Purifying <br>
+                Flower colour: No-Flowers
+            </p>
+            <p>Price: ₹399.00</p>
+            <button onclick="buyNow('https://kyari.co/products/the-sansevieria-futura-superba-snake-plant?currency=INR&variant=43963155120342&utm_medium=cpc&utm_source=google&utm_campaign=Google%20Shopping&stkn=71ae23d4c1ad&utm_source=google&utm_medium=paid&utm_campaign=19849103644&utm_content=&utm_term=&gadid=&gclid=CjwKCAiAzc2tBhA6EiwArv-i6WxMDGXygIM__m-rb8-q-w9nWoMQ-OiwCPBcf7L_cmPQ4zeEzS4VIBoCtFoQAvD_BwE')">Buy Now</button>
+        </div>
+        <!-- Add more plant cards as needed -->
+
+        <script>
+            function buyNow(link) {
+                window.location.href = link;
+            }
+        </script>
+    </section>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to our home gardening haven, where the beauty of nature meets the comfort of your home! At our website, we are dedicated to cultivating a thriving community of green enthusiasts and helping both novice and seasoned gardeners embark on a journey of cultivating their own lush paradises. Dive into a world of horticultural wonders as we provide expert tips, insightful guides, and a wealth of resources to transform your living spaces into vibrant, sustainable oases. Whether you have a sprawling backyard or just a tiny balcony, our passion for home gardening extends to every corner of your abode. Join us on this green adventure, where we celebrate the joy of nurturing life and fostering a connection with the natural world, one seed at a time. Happy gardening!</p>
+    </section>
+
+    <section id="business-idea">
+        <h2>Mobile Application for Personalized Home Gardening</h2>
+        <p>
+            Introducing our groundbreaking mobile application for personalized
+            home gardening – your green thumb's new best friend! Our app is
+            meticulously crafted to empower gardening enthusiasts of all levels,
+            providing a personalized experience that caters to your unique gardening
+            needs. From tailored planting schedules and expert advice to real-time
+            weather updates and plant care reminders, this app is designed to turn
+            your smartphone into a pocket-sized garden assistant. Seamlessly browse
+            through an extensive plant database, access in-depth care guides, and
+            receive customized recommendations based on your location and preferences.
+            Embrace the convenience of managing your garden on the go, ensuring that
+            every plant in your care thrives to its fullest potential. Elevate your
+            gardening journey with our mobile app – the perfect companion for
+            cultivating a flourishing and personalized home garden. Ready to
+            embark on this green adventure? Download the app now and unlock the
+            secrets to a thriving garden!
+            <a href="https://play.google.com/store/apps/details?id=com.gardenapp&hl=en&gl=US" target="_blank" rel="noopener noreferrer">Download Now</a>
+        </p>
+    </section>
+
+    <section id="key-features">
+        <h2>Key Features</h2>
+        <p>
+            1. <strong>Plant Selection:</strong>The application would offer a user-friendly interface allowing individuals to select plants suitable for their local climate and available space.
+            <br>
+            2. <strong> Gardening Tips:</strong> Providing real-time, location-specific gardening tips, including planting seasons, soil types, and pest control advice.
+            <br>
+            3. <strong>Community Engagement:</strong> Creating a gardening community where users can share their experiences, seek advice, and even trade or sell excess produce.
+            <br>
+            4. <strong>E-commerce Integration:</strong> Facilitating the purchase of gardening equipment, seeds, and soil through partnerships with local and online vendors.
+            <br>
+            5. <strong> Health Tracking:</strong> Users can monitor the health of their plants through photos, and the app would offer suggestions and solutions in case of issues.
+        </p>
+    </section>
+
+    <section id="unique-selling-points">
+        <h2>Uniqueness About Our App</h2>
+        <p>
+            1. <strong>Localized Knowledge:</strong> The app's emphasis on local climate and conditions ensures that even beginners can have success in gardening.
+            <br>
+            2. <strong> Community Building:</strong>By fostering a gardening community, the app encourages user engagement and increases its stickiness.
+            <br>
+            3. <strong>Sustainability:</strong> As more people grow their own food, the app contributes to local food security and sustainability.
+        </p>
+    </section>
+
+    <section id="Why Now Gardening" style="margin-bottom: 80px;">
+        <h2>Why Now Gardening</h2>
+        <p>
+            1. <strong>Interest in Gardening:</strong> The COVID-19 pandemic has sparked a gardening trend as people seek sustainable and self-sufficient lifestyles.
+            <br>
+            2. <strong>Climate Zones:</strong> India's diverse climate zones make it an ideal location for personalized gardening tips.
+            <br>
+            3. <strong>Population:</strong> The country's increasing smartphone penetration ensures accessibility to a broad user base.
+        </p>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2024 Home Gardening App</p>
+        <div id="contact-info" class="contact-info">
+            <p>We Are Here:<br>
+                Home Gardening App<br>
+                Sunshine Sunflower Inc<br>
+                Anaparthi,<br>
+                 Andhra Pradesh,<br> INDIA - 53342<br><br>
+
+                <a href="mailto:namaste@homegardeningapp.com">namaste@homegardeningapp.com</a><br>
+                Contact No. +91 830-948-6675</p>
+
+        </div>
+        <div class="contact-info">
+            <p>
+                Follow us:
+                <a href="https://www.facebook.com/vhamse.gomez/" target="_blank"><img src="icons/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://twitter.com/VAMSHYNAIDU" target="_blank"><img src="icons/twitter-icon.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/mr.phoenix_vamshy/" target="_blank"><img src="icons/instagram-icon.png" alt="Instagram"></a>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

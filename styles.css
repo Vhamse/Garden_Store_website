@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('logo.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-info-box {
+    display: inline-block;
+    background-color: rgba(23, 234, 33, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.header-info-box p {
+    margin: 0;
+}
+
+.search-bar {
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.search-input {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5em;
+    width: 80%;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 0.5em;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+#introduction p {
+    font-size: 1.15em;
+}
+
+.filter-container {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.filter-container h3 {
+    color: #4CAF50;
+}
+
+.filter-container button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-container button:hover {
+    background-color: #45a049;
+}
+
+.plant-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.plant-card {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.plant-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.plant-card h3 {
+    color: #4CAF50;
+}
+
+.plant-card p {
+    margin: 10px 0;
+}
+
+.plant-card button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plant-card button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-info {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.contact-info p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-info a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    header {
+        background-size: contain;
+    }
+
+    .auth-buttons {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
